@@ -22,6 +22,8 @@
     [self.window makeKeyAndVisible];
     
     NSLog(@"yuepengfei");
+    NSLog(@"huangshuangquan");
+    
     
     return YES;
 }
