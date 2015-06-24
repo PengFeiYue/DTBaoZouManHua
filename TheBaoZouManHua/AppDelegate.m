@@ -20,11 +20,61 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-    
+    /*
     NSLog(@"yuepengfei");
     NSLog(@"huangshuangquan");
     NSLog(@"yuepengfei");
     NSLog(@"Cheshire测试");
+    */
+    
+    //创建根视图控制器
+    RootTableViewController *rootVC = [[RootTableViewController alloc]init];
+    rootVC.tabBarItem.title = @"首页";
+    rootVC.tabBarItem.image = [UIImage imageNamed:@"5458.png"];
+    //创建导航条控制器，并把rootVC贴到rootNV上
+    UINavigationController *rootNV = [[UINavigationController alloc]initWithRootViewController:rootVC];
+    
+    UINavigationController *historyNV = [[UINavigationController alloc]init];
+    historyNV.tabBarItem.title = @"历史记录";
+    historyNV.tabBarItem.image = [UIImage imageNamed:@"0844.png"];
+    
+    UINavigationController *myNV = [[UINavigationController alloc]init];
+    myNV.tabBarItem.title = @"我的收藏";
+    myNV.tabBarItem.image = [UIImage imageNamed:@"tabbar_contacts@2x.png"];
+    
+    UINavigationController *exitNV = [[UINavigationController alloc]init];
+    exitNV.tabBarItem.title = @"退出";
+    exitNV.tabBarItem.image = [UIImage imageNamed:@"Unknown.png"];
+    
+/*************标签视图控制器部分********************/
+    //创建一个不可变数组用来管理多个控制器
+    NSArray *controllers = @[rootNV , historyNV , myNV , exitNV];
+    
+    //创建一个标签视图控制器
+    UITabBarController *tabar = [[UITabBarController alloc]init];
+    //给标签视图控制器指定准备好的单试图控制器数组
+    tabar.viewControllers = controllers;
+    //设置标签栏的渲染颜色
+    tabar.tabBar.tintColor = [UIColor brownColor];
+    //设置整个tabar的颜色
+    tabar.tabBar.barTintColor = [UIColor darkGrayColor];
+    
+    //设置默认的标签是那个
+    tabar.selectedIndex = 0;
+    
+    //把标签试图控制器作为window的根视图控制器
+    self.window.rootViewController = tabar;
+    [tabar release];
+    [rootVC release];
+    [rootNV release];
+    [historyNV release];
+    [myNV release];
+    [exitNV release];
+    
+    
+    
+    
+    
     
     return YES;
 }

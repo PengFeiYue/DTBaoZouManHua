@@ -12,6 +12,14 @@
 		344351261B3AC3CC00463722 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 344351251B3AC3CC00463722 /* Images.xcassets */; };
 		344351291B3AC3CC00463722 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 344351271B3AC3CC00463722 /* LaunchScreen.xib */; };
 		344351351B3AC3CC00463722 /* TheBaoZouManHuaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 344351341B3AC3CC00463722 /* TheBaoZouManHuaTests.m */; };
+		34FBAAEF1B3AD19C00223F4D /* RootTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34FBAAEE1B3AD19C00223F4D /* RootTableViewController.m */; };
+		34FBAAF31B3AD62600223F4D /* 5458.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FBAAF21B3AD62600223F4D /* 5458.png */; };
+		34FBAAF51B3ADA8C00223F4D /* 0843.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FBAAF41B3ADA8C00223F4D /* 0843.png */; };
+		34FBAAF71B3ADAD200223F4D /* 0844.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FBAAF61B3ADAD200223F4D /* 0844.png */; };
+		34FBAAF91B3ADB5E00223F4D /* tabbar_contacts@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FBAAF81B3ADB5E00223F4D /* tabbar_contacts@2x.png */; };
+		34FBAB071B3ADEDF00223F4D /* Unknown1.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FBAB061B3ADEDF00223F4D /* Unknown1.png */; };
+		34FBAB091B3ADF1800223F4D /* Unknown.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FBAB081B3ADF1800223F4D /* Unknown.png */; };
+		34FBAB0B1B3AE39100223F4D /* left@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FBAB0A1B3AE39100223F4D /* left@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +43,16 @@
 		3443512E1B3AC3CC00463722 /* TheBaoZouManHuaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheBaoZouManHuaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		344351331B3AC3CC00463722 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		344351341B3AC3CC00463722 /* TheBaoZouManHuaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TheBaoZouManHuaTests.m; sourceTree = "<group>"; };
+		34FBAAEC1B3AD13700223F4D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		34FBAAED1B3AD19C00223F4D /* RootTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootTableViewController.h; sourceTree = "<group>"; };
+		34FBAAEE1B3AD19C00223F4D /* RootTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootTableViewController.m; sourceTree = "<group>"; };
+		34FBAAF21B3AD62600223F4D /* 5458.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 5458.png; sourceTree = "<group>"; };
+		34FBAAF41B3ADA8C00223F4D /* 0843.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0843.png; sourceTree = "<group>"; };
+		34FBAAF61B3ADAD200223F4D /* 0844.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0844.png; sourceTree = "<group>"; };
+		34FBAAF81B3ADB5E00223F4D /* tabbar_contacts@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tabbar_contacts@2x.png"; sourceTree = "<group>"; };
+		34FBAB061B3ADEDF00223F4D /* Unknown1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Unknown1.png; sourceTree = "<group>"; };
+		34FBAB081B3ADF1800223F4D /* Unknown.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Unknown.png; sourceTree = "<group>"; };
+		34FBAB0A1B3AE39100223F4D /* left@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "left@2x.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +102,7 @@
 				3443514B1B3ACC3600463722 /* Resources */,
 				3443514A1B3ACC3400463722 /* Sections */,
 				344351491B3ACC3200463722 /* UserInterface */,
+				34FBAAF11B3AD60800223F4D /* Image */,
 				344351481B3ACC3000463722 /* Venders */,
 				344351251B3AC3CC00463722 /* Images.xcassets */,
 				344351271B3AC3CC00463722 /* LaunchScreen.xib */,
@@ -137,6 +156,7 @@
 		344351491B3ACC3200463722 /* UserInterface */ = {
 			isa = PBXGroup;
 			children = (
+				34FBAAEC1B3AD13700223F4D /* PrefixHeader.pch */,
 			);
 			name = UserInterface;
 			sourceTree = "<group>";
@@ -179,8 +199,24 @@
 		3443514F1B3ACC3E00463722 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				34FBAAED1B3AD19C00223F4D /* RootTableViewController.h */,
+				34FBAAEE1B3AD19C00223F4D /* RootTableViewController.m */,
 			);
 			name = General;
+			sourceTree = "<group>";
+		};
+		34FBAAF11B3AD60800223F4D /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				34FBAB0A1B3AE39100223F4D /* left@2x.png */,
+				34FBAB081B3ADF1800223F4D /* Unknown.png */,
+				34FBAB061B3ADEDF00223F4D /* Unknown1.png */,
+				34FBAAF81B3ADB5E00223F4D /* tabbar_contacts@2x.png */,
+				34FBAAF61B3ADAD200223F4D /* 0844.png */,
+				34FBAAF41B3ADA8C00223F4D /* 0843.png */,
+				34FBAAF21B3AD62600223F4D /* 5458.png */,
+			);
+			name = Image;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,8 +299,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34FBAB071B3ADEDF00223F4D /* Unknown1.png in Resources */,
+				34FBAAF31B3AD62600223F4D /* 5458.png in Resources */,
 				344351291B3AC3CC00463722 /* LaunchScreen.xib in Resources */,
+				34FBAAF71B3ADAD200223F4D /* 0844.png in Resources */,
+				34FBAAF51B3ADA8C00223F4D /* 0843.png in Resources */,
+				34FBAB0B1B3AE39100223F4D /* left@2x.png in Resources */,
 				344351261B3AC3CC00463722 /* Images.xcassets in Resources */,
+				34FBAB091B3ADF1800223F4D /* Unknown.png in Resources */,
+				34FBAAF91B3ADB5E00223F4D /* tabbar_contacts@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +325,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34FBAAEF1B3AD19C00223F4D /* RootTableViewController.m in Sources */,
 				344351241B3AC3CC00463722 /* AppDelegate.m in Sources */,
 				344351211B3AC3CC00463722 /* main.m in Sources */,
 			);
@@ -399,6 +443,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TheBaoZouManHua/PrefixHeader.pch";
 				INFOPLIST_FILE = TheBaoZouManHua/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -409,6 +455,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_ARC = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/TheBaoZouManHua/PrefixHeader.pch";
 				INFOPLIST_FILE = TheBaoZouManHua/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
