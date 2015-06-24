@@ -76,8 +76,7 @@
 		3443511D1B3AC3CC00463722 /* TheBaoZouManHua */ = {
 			isa = PBXGroup;
 			children = (
-				344351221B3AC3CC00463722 /* AppDelegate.h */,
-				344351231B3AC3CC00463722 /* AppDelegate.m */,
+				344351471B3ACB9500463722 /* AppDelegate */,
 				344351251B3AC3CC00463722 /* Images.xcassets */,
 				344351271B3AC3CC00463722 /* LaunchScreen.xib */,
 				3443511E1B3AC3CC00463722 /* Supporting Files */,
@@ -109,6 +108,15 @@
 				344351331B3AC3CC00463722 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		344351471B3ACB9500463722 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				344351221B3AC3CC00463722 /* AppDelegate.h */,
+				344351231B3AC3CC00463722 /* AppDelegate.m */,
+			);
+			name = AppDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -396,6 +404,7 @@
 				3443513A1B3AC3CC00463722 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3443513B1B3AC3CC00463722 /* Build configuration list for PBXNativeTarget "TheBaoZouManHuaTests" */ = {
 			isa = XCConfigurationList;
@@ -404,6 +413,7 @@
 				3443513D1B3AC3CC00463722 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
