@@ -125,8 +125,6 @@
 }
 
 
-
-
 - (void)dealloc
 {
     [_accountLabel release];

@@ -94,16 +94,17 @@
 - (void)leftBarButtonItemAction:(UIBarButtonItem *)leftBar
 {
     //跳转到下一个页面
-    loadViewController *loadVC = [[loadViewController alloc]init];
-    /* //？？
+    SetViewController *setVC = [[SetViewController alloc]init];
+    /*  
      UIModalTransitionStyleCoverVertical ,
      UIModalTransitionStyleFlipHorizontal,
      UIModalTransitionStyleCrossDissolve,
      UIModalTransitionStylePartialCurl
+     loadVC.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+     [self presentViewController:loadVC animated:YES completion:nil];
      
-     loadVC.modalTransitionStyle = UIModalTransitionStylePartialCurl;
      */
-    [self.navigationController pushViewController:loadVC animated:YES];
+    [self.navigationController pushViewController:setVC animated:YES];
 }
 
 #pragma mark - Table view data source
