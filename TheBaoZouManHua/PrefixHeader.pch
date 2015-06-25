@@ -14,7 +14,9 @@
 
 #endif
 #import "RootTableViewController.h"
+#import "CollectTableViewController.h"
+#import "myViewController.h"
 
 
 
-
+ 

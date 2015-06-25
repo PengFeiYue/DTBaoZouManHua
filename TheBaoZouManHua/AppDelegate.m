@@ -34,13 +34,18 @@
     //创建导航条控制器，并把rootVC贴到rootNV上
     UINavigationController *rootNV = [[UINavigationController alloc]initWithRootViewController:rootVC];
     
-    UINavigationController *historyNV = [[UINavigationController alloc]init];
-    historyNV.tabBarItem.title = @"历史记录";
-    historyNV.tabBarItem.image = [UIImage imageNamed:@"0844.png"];
+    CollectTableViewController *collectVC = [[CollectTableViewController alloc]init];
+    collectVC.tabBarItem.title = @"我的收藏";
+    collectVC.tabBarItem.image = [UIImage imageNamed:@"0844.png"];
     
-    UINavigationController *myNV = [[UINavigationController alloc]init];
-    myNV.tabBarItem.title = @"我的收藏";
-    myNV.tabBarItem.image = [UIImage imageNamed:@"tabbar_contacts@2x.png"];
+    UINavigationController *collectNV = [[UINavigationController alloc]initWithRootViewController:collectVC];
+    
+    
+    
+    myViewController *myVC = [[myViewController alloc]init];
+    myVC.tabBarItem.title = @"我的";
+    myVC.tabBarItem.image = [UIImage imageNamed:@"tabbar_contacts.png"];
+    UINavigationController *myNV = [[UINavigationController alloc]initWithRootViewController:myVC];
     
     UINavigationController *exitNV = [[UINavigationController alloc]init];
     exitNV.tabBarItem.title = @"退出";
@@ -48,7 +53,7 @@
     
 /*************标签视图控制器部分********************/
     //创建一个不可变数组用来管理多个控制器
-    NSArray *controllers = @[rootNV , historyNV , myNV , exitNV];
+    NSArray *controllers = @[rootNV , collectNV , myNV , exitNV];
     
     //创建一个标签视图控制器
     UITabBarController *tabar = [[UITabBarController alloc]init];
@@ -67,7 +72,7 @@
     [tabar release];
     [rootVC release];
     [rootNV release];
-    [historyNV release];
+    [collectNV release];
     [myNV release];
     [exitNV release];
     
