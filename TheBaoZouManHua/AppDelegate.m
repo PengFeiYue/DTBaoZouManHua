@@ -28,7 +28,7 @@
     */
     
     //创建根视图控制器
-    RootTableViewController *rootVC = [[RootTableViewController alloc]init];
+    RootViewController *rootVC = [[RootViewController alloc]init];
     rootVC.tabBarItem.title = @"首页";
     rootVC.tabBarItem.image = [UIImage imageNamed:@"5458.png"];
     //创建导航条控制器，并把rootVC贴到rootNV上
