@@ -18,6 +18,7 @@
 		3483E36C1B3BD669001F0876 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3483E36B1B3BD669001F0876 /* DetailsViewController.m */; };
 		3483E36F1B3BDFF4001F0876 /* ForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3483E36E1B3BDFF4001F0876 /* ForgetViewController.m */; };
 		3483E3721B3BF02F001F0876 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3483E3711B3BF02F001F0876 /* RootViewController.m */; };
+		3483E3751B3BF7AA001F0876 /* loadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3483E3741B3BF7AA001F0876 /* loadViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,8 @@
 		3483E36E1B3BDFF4001F0876 /* ForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForgetViewController.m; sourceTree = "<group>"; };
 		3483E3701B3BF02F001F0876 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		3483E3711B3BF02F001F0876 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
+		3483E3731B3BF7AA001F0876 /* loadViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = loadViewController.h; sourceTree = "<group>"; };
+		3483E3741B3BF7AA001F0876 /* loadViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = loadViewController.m; sourceTree = "<group>"; };
 		34FBAAEC1B3AD13700223F4D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,6 +202,8 @@
 		3443514F1B3ACC3E00463722 /* General */ = {
 			isa = PBXGroup;
 			children = (
+				3483E3701B3BF02F001F0876 /* RootViewController.h */,
+				3483E3711B3BF02F001F0876 /* RootViewController.m */,
 				3483E3641B3B9BB4001F0876 /* myViewController.h */,
 				3483E3651B3B9BB4001F0876 /* myViewController.m */,
 				3483E3611B3B96C5001F0876 /* CollectTableViewController.h */,
@@ -209,8 +214,8 @@
 				3483E36B1B3BD669001F0876 /* DetailsViewController.m */,
 				3483E36D1B3BDFF4001F0876 /* ForgetViewController.h */,
 				3483E36E1B3BDFF4001F0876 /* ForgetViewController.m */,
-				3483E3701B3BF02F001F0876 /* RootViewController.h */,
-				3483E3711B3BF02F001F0876 /* RootViewController.m */,
+				3483E3731B3BF7AA001F0876 /* loadViewController.h */,
+				3483E3741B3BF7AA001F0876 /* loadViewController.m */,
 			);
 			name = General;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3483E3751B3BF7AA001F0876 /* loadViewController.m in Sources */,
 				3483E3631B3B96C5001F0876 /* CollectTableViewController.m in Sources */,
 				3483E3691B3BAADF001F0876 /* RegisterViewController.m in Sources */,
 				344351241B3AC3CC00463722 /* AppDelegate.m in Sources */,

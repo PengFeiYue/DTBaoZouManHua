@@ -62,7 +62,7 @@
     
     //添加导航条的leftItem
     //    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(leftBarButtonItemAction:)];
-    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithTitle:@"设置" style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonItemAction:)];
+    UIBarButtonItem *leftItem = [[UIBarButtonItem alloc]initWithTitle:@"左边" style:UIBarButtonItemStylePlain target:self action:@selector(leftBarButtonItemAction:)];
     self.navigationItem.leftBarButtonItem = leftItem;
     leftItem.tintColor = [UIColor orangeColor];
     
@@ -93,7 +93,17 @@
 }
 - (void)leftBarButtonItemAction:(UIBarButtonItem *)leftBar
 {
-    
+    //跳转到下一个页面
+    loadViewController *loadVC = [[loadViewController alloc]init];
+    /* //？？
+     UIModalTransitionStyleCoverVertical ,
+     UIModalTransitionStyleFlipHorizontal,
+     UIModalTransitionStyleCrossDissolve,
+     UIModalTransitionStylePartialCurl
+     
+     loadVC.modalTransitionStyle = UIModalTransitionStylePartialCurl;
+     */
+    [self.navigationController pushViewController:loadVC animated:YES];
 }
 
 #pragma mark - Table view data source
