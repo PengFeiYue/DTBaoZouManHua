@@ -13,7 +13,7 @@
 @property (nonatomic , retain) UIScrollView *myScrowView;
 @property (nonatomic , retain) UIPageControl *pageControl;
 @property (nonatomic , retain) UITableView *tabView;
-
+@property (nonatomic , assign) NSArray *imageArray;
 
 
 @end

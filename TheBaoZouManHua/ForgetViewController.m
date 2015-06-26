@@ -4,7 +4,7 @@
 //
 //  Created by lanouhn on 15/6/25.
 //  Copyright (c) 2015年 lanouhn. All rights reserved.
-//
+//****************  忘记密码   *******************************
 
 #import "ForgetViewController.h"
 

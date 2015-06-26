@@ -4,7 +4,7 @@
 //
 //  Created by lanouhn on 15/6/25.
 //  Copyright (c) 2015年 lanouhn. All rights reserved.
-//
+//**************  设置   ****************
 
 #import "SetViewController.h"
 
@@ -18,6 +18,12 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor purpleColor];
     // Do any additional setup after loading the view.
+    
+    
+    
+    UIView *iq = [[UIView alloc]initWithFrame:CGRectMake(60, 60, 100, 140)];
+    iq.backgroundColor = [UIColor redColor];
+    [self.view addSubview:iq];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -1,23 +1,28 @@
 //
-//  loadViewController.m
+//  CellViewController.m
 //  TheBaoZouManHua
 //
-//  Created by lanouhn on 15/6/25.
+//  Created by lanouhn on 15/6/26.
 //  Copyright (c) 2015年 lanouhn. All rights reserved.
-//
+//******************* cell详情展示页面 **************
 
-#import "loadViewController.h"
+#import "CellViewController.h"
 
-@interface loadViewController ()
+@interface CellViewController ()
 
 @end
 
-@implementation loadViewController
+@implementation CellViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor cyanColor];
+    self.view.backgroundColor = [UIColor brownColor];
+    
     // Do any additional setup after loading the view.
+    
+    self.navigationItem.title = @"cell详情展示页面";
+    
+    
 }
 
 - (void)didReceiveMemoryWarning {

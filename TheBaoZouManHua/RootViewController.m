@@ -4,16 +4,12 @@
 //
 //  Created by lanouhn on 15/6/25.
 //  Copyright (c) 2015年 lanouhn. All rights reserved.
-//
+//******************************  首页   ************************************
 
 #import "RootViewController.h"
 
 @interface RootViewController ()<UITableViewDataSource , UITableViewDelegate , UIScrollViewDelegate>
-{
-    NSArray *_imageArray;//用来存放图片的数组
-    NSTimer *_myTimer;//定时器
-    
-}
+
 
 @end
 
@@ -24,6 +20,7 @@
     // Do any additional setup after loading the view.
     
     //图片滚动区
+    /*
     self.myScrowView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 250)];
     
     self.myScrowView.backgroundColor = [UIColor blueColor];
@@ -78,18 +75,29 @@
     
     
     //ScrollView
+    */
+    DJScrollView *scrollView = [[DJScrollView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 250) animationDuration:1.0];
     
+    [self.view addSubview:scrollView];
+    self.imageArray = @[@"image1.jpg", @"image2.jpg", @"image13.jpg", @"image14.jpg", @"image15.jpg"];
+    scrollView.adsArray = self.imageArray;
+    //滚动图的点击手势
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
+    [scrollView addGestureRecognizer:tap];
+    
+    [scrollView release];
    
 /*****************************************************************************************************/
     //tabView
-    self.tabView = [[UITableView alloc]initWithFrame:CGRectMake(0, self.myScrowView.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - self.myScrowView.frame.size.height)];
+    self.tabView = [[UITableView alloc]initWithFrame:CGRectMake(0, scrollView.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - self.myScrowView.frame.size.height)];
     self.tabView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:self.tabView];
-    [self.tabView release];
+    
     
     self.tabView.delegate = self;
     self.tabView.dataSource = self;
     
+    [self.tabView release];
     //设置导航条的标题
     self.navigationItem.title = @"我的首页";
     //改变导航条的背景颜色
@@ -142,33 +150,13 @@
     
 }
 
-//定时器
-- (void)scrollToNextPage:(NSTimer *)sender
+- (void)tapAction:(UITapGestureRecognizer *)tap
 {
-    int pageNumber = (int)self.pageControl.currentPage;
-    CGSize viewSize =  self.myScrowView.frame.size;
-//    CGSize viewSize = CGSizeMake(self.myScrowView.frame.size.width, 250) ;
-    CGRect rect = CGRectMake((pageNumber + 1) * viewSize.width, 0, viewSize.width, viewSize.height);
-    [self.myScrowView scrollRectToVisible:rect animated:YES];
-    if (pageNumber == 3) {
-        CGRect newRect = CGRectMake(viewSize.width, 0, viewSize.width, viewSize.height);
-        [self.myScrowView scrollRectToVisible:newRect animated:NO];
-    }
-    pageNumber ++;
-    
+    CellViewController *cellVC = [[CellViewController alloc]init];
+    UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:cellVC];
+    [self presentViewController:nav animated:YES completion:nil];
 }
 
-- (void)pageControlAction:(UIPageControl *)sender
-{
-    self.myScrowView.contentOffset = CGPointMake(sender.currentPage * self.view.frame.size.width, 0);
-}
-
-#pragma mark - UIScrollView  Delegate
-- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
-{
-    //先找到偏移量，再根据偏移量设置currentPage
-    self.pageControl.currentPage = self.myScrowView.contentOffset.x / self.view.frame.size.width;
-}
 
 #pragma mark - itemBar 的点击事件
 //刷新按钮的实现方法
@@ -233,6 +221,9 @@
         cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellID];
     }
     
+    //给每个cell添加手势
+    UITapGestureRecognizer *tapTwo = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(tapAction:)];
+    [cell addGestureRecognizer:tapTwo];
     
     
     cell.textLabel.text = @"测试数据";
@@ -244,6 +235,7 @@
 
 - (void)dealloc
 {
+    _imageArray = nil;
     [_myScrowView release];
     [_tabView release];
     [super dealloc];
