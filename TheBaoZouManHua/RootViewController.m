@@ -8,7 +8,12 @@
 
 #import "RootViewController.h"
 
-@interface RootViewController ()<UITableViewDataSource , UITableViewDelegate>
+@interface RootViewController ()<UITableViewDataSource , UITableViewDelegate , UIScrollViewDelegate>
+{
+    NSArray *_imageArray;//用来存放图片的数组
+    NSTimer *_myTimer;//定时器
+    
+}
 
 @end
 
@@ -19,13 +24,65 @@
     // Do any additional setup after loading the view.
     
     //图片滚动区
-    self.scrowView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 250)];
-    self.scrowView.backgroundColor = [UIColor blueColor];
-    [self.view addSubview:self.scrowView];
-    [self.scrowView release];
+    self.myScrowView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 250)];
     
+    self.myScrowView.backgroundColor = [UIColor blueColor];
+    self.myScrowView.pagingEnabled = YES;//以页为单位滑动，即自动到下一页的开始边界
+    self.myScrowView.showsVerticalScrollIndicator = NO;
+    self.myScrowView.showsHorizontalScrollIndicator = NO;//隐藏垂直和水平显示条
+//    self.myScrowView.bounces = NO;
+    
+    
+    //初始化一个存放图片的数组
+    _imageArray = [NSArray arrayWithObjects:[UIImage  imageNamed:@"image1.jpg"], [UIImage imageNamed:@"image2.jpg"], [UIImage imageNamed:@"image3.png"], [UIImage imageNamed:@"image4.jpg"], nil];
+   
+
+    for (int i = 0; i < [_imageArray count]; i ++) {
+         UIImageView *imageView1 = [[UIImageView alloc]initWithFrame:CGRectMake(i * self.view.frame.size.width, 0, self.view.frame.size.width, self.myScrowView.frame.size.height)];
+        imageView1.image = [_imageArray objectAtIndex:i];
+        [self.myScrowView addSubview:imageView1];
+         [imageView1 release];
+
+    }
+     //给ScrollView 设置contentSize(高度为0 代表不允许垂直方向移动)
+    self.myScrowView.contentSize = CGSizeMake(self.view.frame.size.width * 4, 0);
+    //设置myScrowView的代理
+    self.myScrowView.delegate = self;
+    
+    
+
+    //创建UIPageControl
+    self.pageControl = [[UIPageControl alloc]initWithFrame:CGRectMake(0, self.myScrowView.frame.size.height - 30, self.view.frame.size.width, 30)];
+    //背景色
+//    self.pageControl.backgroundColor = [UIColor redColor];
+    //设置点的个数
+    self.pageControl.numberOfPages = 4;
+    //把某个点设置为当前点????????????????????????????????????????????????
+//    self.pageControl.currentPage = 1;
+    //给当前点设置颜色
+    self.pageControl.currentPageIndicatorTintColor = [UIColor brownColor];
+    //其他点设置颜色
+    self.pageControl.pageIndicatorTintColor = [UIColor grayColor];
+    self.pageControl.enabled = YES;//点击pageControl 滚动图片
+    
+    //给PageControl设置点击事件
+    [self.pageControl addTarget:self action:@selector(pageControlAction:) forControlEvents:UIControlEventValueChanged];
+    
+    [self.view addSubview:self.myScrowView];
+    [self.view addSubview:self.pageControl];
+    [self.myScrowView release];
+    [self.pageControl release];
+    //添加定时器
+    
+    _myTimer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(scrollToNextPage:) userInfo:nil repeats:YES];
+    
+    
+    //ScrollView
+    
+   
+/*****************************************************************************************************/
     //tabView
-    self.tabView = [[UITableView alloc]initWithFrame:CGRectMake(0, self.scrowView.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - self.scrowView.frame.size.height)];
+    self.tabView = [[UITableView alloc]initWithFrame:CGRectMake(0, self.myScrowView.frame.size.height, self.view.frame.size.width, self.view.frame.size.height - self.myScrowView.frame.size.height)];
     self.tabView.backgroundColor = [UIColor clearColor];
     [self.view addSubview:self.tabView];
     [self.tabView release];
@@ -83,6 +140,34 @@
 
     
     
+}
+
+//定时器
+- (void)scrollToNextPage:(NSTimer *)sender
+{
+    int pageNumber = (int)self.pageControl.currentPage;
+    CGSize viewSize =  self.myScrowView.frame.size;
+//    CGSize viewSize = CGSizeMake(self.myScrowView.frame.size.width, 250) ;
+    CGRect rect = CGRectMake((pageNumber + 1) * viewSize.width, 0, viewSize.width, viewSize.height);
+    [self.myScrowView scrollRectToVisible:rect animated:YES];
+    if (pageNumber == 3) {
+        CGRect newRect = CGRectMake(viewSize.width, 0, viewSize.width, viewSize.height);
+        [self.myScrowView scrollRectToVisible:newRect animated:NO];
+    }
+    pageNumber ++;
+    
+}
+
+- (void)pageControlAction:(UIPageControl *)sender
+{
+    self.myScrowView.contentOffset = CGPointMake(sender.currentPage * self.view.frame.size.width, 0);
+}
+
+#pragma mark - UIScrollView  Delegate
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    //先找到偏移量，再根据偏移量设置currentPage
+    self.pageControl.currentPage = self.myScrowView.contentOffset.x / self.view.frame.size.width;
 }
 
 #pragma mark - itemBar 的点击事件
@@ -159,7 +244,7 @@
 
 - (void)dealloc
 {
-    [_scrowView release];
+    [_myScrowView release];
     [_tabView release];
     [super dealloc];
 }

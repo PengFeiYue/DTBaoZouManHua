@@ -10,7 +10,10 @@
 
 @interface RootViewController : UIViewController
 
-@property (nonatomic , retain) UIView *scrowView;
+@property (nonatomic , retain) UIScrollView *myScrowView;
+@property (nonatomic , retain) UIPageControl *pageControl;
 @property (nonatomic , retain) UITableView *tabView;
+
+
 
 @end
