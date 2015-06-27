@@ -41,6 +41,8 @@
 		34B8EDBE1B3D51A400C616C3 /* DJScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B8EDBB1B3D51A400C616C3 /* DJScrollView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		34B8EDBF1B3D51A400C616C3 /* NSTimer+Addition.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B8EDBD1B3D51A400C616C3 /* NSTimer+Addition.m */; };
 		34B8EDC21B3D580A00C616C3 /* CellViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34B8EDC11B3D580A00C616C3 /* CellViewController.m */; };
+		34E6E2071B3E3ACC0043DB55 /* ButtonView.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E2061B3E3ACC0043DB55 /* ButtonView.m */; };
+		34E6E20A1B3E51C30043DB55 /* CommentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34E6E2091B3E51C30043DB55 /* CommentViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +105,10 @@
 		34B8EDBD1B3D51A400C616C3 /* NSTimer+Addition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSTimer+Addition.m"; sourceTree = "<group>"; };
 		34B8EDC01B3D580A00C616C3 /* CellViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellViewController.h; sourceTree = "<group>"; };
 		34B8EDC11B3D580A00C616C3 /* CellViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellViewController.m; sourceTree = "<group>"; };
+		34E6E2051B3E3ACC0043DB55 /* ButtonView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ButtonView.h; sourceTree = "<group>"; };
+		34E6E2061B3E3ACC0043DB55 /* ButtonView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonView.m; sourceTree = "<group>"; };
+		34E6E2081B3E51C30043DB55 /* CommentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommentViewController.h; sourceTree = "<group>"; };
+		34E6E2091B3E51C30043DB55 /* CommentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommentViewController.m; sourceTree = "<group>"; };
 		34FBAAEC1B3AD13700223F4D /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -230,6 +236,8 @@
 		3443514C1B3ACC3800463722 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				34E6E2051B3E3ACC0043DB55 /* ButtonView.h */,
+				34E6E2061B3E3ACC0043DB55 /* ButtonView.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -267,6 +275,8 @@
 				3483E3771B3BFEA4001F0876 /* SetViewController.m */,
 				34B8EDC01B3D580A00C616C3 /* CellViewController.h */,
 				34B8EDC11B3D580A00C616C3 /* CellViewController.m */,
+				34E6E2081B3E51C30043DB55 /* CommentViewController.h */,
+				34E6E2091B3E51C30043DB55 /* CommentViewController.m */,
 			);
 			name = General;
 			sourceTree = "<group>";
@@ -428,6 +438,7 @@
 			files = (
 				3483E3631B3B96C5001F0876 /* CollectTableViewController.m in Sources */,
 				3483E3691B3BAADF001F0876 /* RegisterViewController.m in Sources */,
+				34E6E20A1B3E51C30043DB55 /* CommentViewController.m in Sources */,
 				3483E3781B3BFEA4001F0876 /* SetViewController.m in Sources */,
 				344351241B3AC3CC00463722 /* AppDelegate.m in Sources */,
 				3483E36C1B3BD669001F0876 /* DetailsViewController.m in Sources */,
@@ -436,6 +447,7 @@
 				3483E3721B3BF02F001F0876 /* RootViewController.m in Sources */,
 				344351211B3AC3CC00463722 /* main.m in Sources */,
 				34B8EDBE1B3D51A400C616C3 /* DJScrollView.m in Sources */,
+				34E6E2071B3E3ACC0043DB55 /* ButtonView.m in Sources */,
 				3483E3661B3B9BB4001F0876 /* myViewController.m in Sources */,
 				3483E36F1B3BDFF4001F0876 /* ForgetViewController.m in Sources */,
 			);

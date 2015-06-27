@@ -22,3 +22,4 @@
 #import "RootViewController.h"
 #import "SetViewController.h"
 #import "DJScrollView.h"
+#import "CommentViewController.h"

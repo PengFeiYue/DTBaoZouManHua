@@ -7,6 +7,7 @@
 //******************* cell详情展示页面 **************
 
 #import "CellViewController.h"
+#import "ButtonView.h"
 
 @interface CellViewController ()
 
@@ -22,7 +23,21 @@
     
     self.navigationItem.title = @"cell详情展示页面";
     
+    ButtonView *btnView = [[ButtonView alloc]initWithFrame:CGRectMake(0, 626, self.view.frame.size.width, 50)];
+    [btnView setWithButtonName:@"你*们" two:@"分享" three:@"收藏" four:@"评论"];
+ 
+//    btnView.backgroundColor = [UIColor redColor];
+    [self.view addSubview:btnView];
+    [btnView.button4 addTarget:self action:@selector(button4Action:) forControlEvents:UIControlEventTouchUpInside];
     
+    
+}
+
+
+- (void)button4Action:(UIButton *)sender
+{
+    CommentViewController *commentVC = [[CommentViewController alloc]init];
+    [self presentViewController:commentVC animated:YES completion:nil];
 }
 
 - (void)didReceiveMemoryWarning {
